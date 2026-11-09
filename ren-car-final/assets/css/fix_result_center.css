@@ -1,0 +1,18 @@
+
+/* FIX only result column alignment */
+td:last-child, th:last-child {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* keep rest untouched */
+
+
+/* v37 result column alignment fix */
+table th:last-child,
+table td:last-child,
+.table th:last-child,
+.table td:last-child {
+    text-align: center !important;
+    vertical-align: middle !important;
+}

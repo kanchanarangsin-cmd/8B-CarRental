@@ -1,0 +1,76 @@
+/* HTS Final: F-01 / R-06 and F-02 / R-07. Values come from design.md. */
+.hts-task-panel--customer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--hts-space-2);
+  padding: var(--hts-space-3);
+  margin-block-end: var(--hts-space-3);
+  border-inline-start: var(--hts-focus-width) solid var(--primary);
+  background: var(--pastel);
+}
+.hts-task-title {
+  color: var(--nav);
+  font-size: 1.25rem;
+  line-height: var(--hts-space-4);
+  font-weight: 700;
+  margin: 0;
+}
+.hts-task-title i { color: var(--primary); }
+.hts-task-help {
+  color: var(--text);
+  margin: var(--hts-space-1) 0 0;
+}
+.hts-customer-create {
+  background: var(--nav) !important;
+  color: var(--surface) !important;
+  padding: var(--hts-space-2) var(--hts-space-3);
+  white-space: nowrap;
+}
+.hts-customer-create:hover { background: var(--badge-text) !important; }
+
+#customerModal input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#car-rate-list { scroll-margin-top: calc(3 * var(--hts-space-4)); }
+.hts-car-filters { margin-block-end: var(--hts-space-2); }
+.hts-rate-hint {
+  display: block;
+  color: var(--muted);
+  font-weight: 400;
+}
+.hts-rate-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hts-space-1);
+  min-block-size: var(--hts-space-4);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hts-rate-edit span {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+.hts-rate-edit i { font-size: 0.75em; }
+.hts-rate-edit:hover { color: var(--nav); }
+.hts-customer-create:focus-visible,
+.hts-rate-edit:focus-visible,
+#car-rate-list:focus-visible {
+  outline: var(--hts-focus-width) solid var(--badge-text);
+  outline-offset: var(--hts-focus-offset);
+}
+#car_rate_amount { appearance: textfield; }
+#car_rate_amount::-webkit-inner-spin-button,
+#car_rate_amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
